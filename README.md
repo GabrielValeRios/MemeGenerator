@@ -1,2 +1,2 @@
 # MemeGenerator
-Learning react threw meme generator project
+Learning react through meme generator project
