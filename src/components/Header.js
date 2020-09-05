@@ -1,13 +1,15 @@
 import React from "react";
+import { Head, Img, HeadTitle } from "../styled_configuration/HeaderStyles";
 
-function Header(props) {
+function Header() {
   return (
-    <header>
-      <img
+    <Head>
+      <Img
         src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
         alt="Problem?"
       />
-    </header>
+      <HeadTitle>Meme Generator!</HeadTitle>
+    </Head>
   );
 }
 

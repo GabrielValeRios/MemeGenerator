@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Input } from "../styled_configuration/MemeGeneratorStyles";
 
 class MemeGenerator extends React.Component {
   constructor() {
@@ -41,16 +42,16 @@ class MemeGenerator extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <Input
             type="text"
             name="topText"
             placeholder="Top Text"
             value={this.state.topText}
             onChange={this.handleChange}
           />
-          <input
+          <Input
             type="text"
             name="bottomText"
             placeholder="Bottom Text"
@@ -65,7 +66,7 @@ class MemeGenerator extends React.Component {
           <h2>{this.state.topText}</h2>
           <h2>{this.state.bottomText}</h2>
         </div>
-      </div>
+      </Container>
     );
   }
 }
