@@ -1,5 +1,14 @@
 import React from "react";
-import { Container, Input } from "../styled_configuration/MemeGeneratorStyles";
+import {
+  Container,
+  Input,
+  ImgContainer,
+  TopText,
+  BottomText,
+  GenerateButtom,
+  DivForm,
+  MemeImg,
+} from "../styled_configuration/MemeGeneratorStyles";
 
 class MemeGenerator extends React.Component {
   constructor() {
@@ -42,30 +51,32 @@ class MemeGenerator extends React.Component {
 
   render() {
     return (
-      <Container>
-        <form onSubmit={this.handleSubmit}>
-          <Input
-            type="text"
-            name="topText"
-            placeholder="Top Text"
-            value={this.state.topText}
-            onChange={this.handleChange}
-          />
-          <Input
-            type="text"
-            name="bottomText"
-            placeholder="Bottom Text"
-            value={this.state.bottomText}
-            onChange={this.handleChange}
-          />
-          <button>Generate</button>
-        </form>
+      <Container className="row">
+        <DivForm>
+          <form onSubmit={this.handleSubmit}>
+            <Input
+              type="text"
+              name="topText"
+              placeholder="Top Text"
+              value={this.state.topText}
+              onChange={this.handleChange}
+            />
+            <Input
+              type="text"
+              name="bottomText"
+              placeholder="Bottom Text"
+              value={this.state.bottomText}
+              onChange={this.handleChange}
+            />
+            <GenerateButtom>Generate</GenerateButtom>
+          </form>
+        </DivForm>
 
-        <div>
-          <img src={this.state.randomImg} alt="" />
-          <h2>{this.state.topText}</h2>
-          <h2>{this.state.bottomText}</h2>
-        </div>
+        <ImgContainer>
+          <MemeImg src={this.state.randomImg} alt="Meme Image!" />
+          <TopText>{this.state.topText}</TopText>
+          <BottomText>{this.state.bottomText}</BottomText>
+        </ImgContainer>
       </Container>
     );
   }

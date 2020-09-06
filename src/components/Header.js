@@ -3,13 +3,16 @@ import { Head, Img, HeadTitle } from "../styled_configuration/HeaderStyles";
 
 function Header() {
   return (
-    <Head>
-      <Img
-        src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
-        alt="Problem?"
-      />
-      <HeadTitle>Meme Generator!</HeadTitle>
-    </Head>
+    <div className="row">
+      <Head className="col-12">
+        <Img
+          src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
+          alt="Problem?"
+          className="col-2"
+        />
+        <HeadTitle>Meme Generator!</HeadTitle>
+      </Head>
+    </div>
   );
 }
 
