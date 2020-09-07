@@ -2,7 +2,7 @@ import React from "react";
 import {
   Container,
   Input,
-  ImgContainer,
+  DivImg,
   TopText,
   BottomText,
   GenerateButtom,
@@ -51,7 +51,7 @@ class MemeGenerator extends React.Component {
 
   render() {
     return (
-      <Container className="row">
+      <Container>
         <DivForm>
           <form onSubmit={this.handleSubmit}>
             <Input
@@ -72,11 +72,11 @@ class MemeGenerator extends React.Component {
           </form>
         </DivForm>
 
-        <ImgContainer>
+        <DivImg>
           <MemeImg src={this.state.randomImg} alt="Meme Image!" />
           <TopText>{this.state.topText}</TopText>
           <BottomText>{this.state.bottomText}</BottomText>
-        </ImgContainer>
+        </DivImg>
       </Container>
     );
   }

@@ -4,7 +4,7 @@ import { Head, Img, HeadTitle } from "../styled_configuration/HeaderStyles";
 function Header() {
   return (
     <div className="row">
-      <Head className="col-12">
+      <Head>
         <Img
           src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
           alt="Problem?"

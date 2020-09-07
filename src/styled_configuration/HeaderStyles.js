@@ -15,5 +15,6 @@ export const HeadTitle = styled.h1`
 
 export const Img = styled.img`
   height: auto;
-  max-width: 100%;
+  max-width: 20%;
+  padding: 20px;
 `;
